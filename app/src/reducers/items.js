@@ -1,6 +1,6 @@
 const DefaultState = {
 	data: {},
-	firstItem: null
+	firstItem: {}
 };
 
 export default function (state = DefaultState, action) {

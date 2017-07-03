@@ -1,11 +1,13 @@
 export const DataSelector = (state) => {
 	const { items } = state;
-	let { firstItem } = items;
+	let { firstItem } = state.items;
 	if(items.data && items.data.length) {
 		firstItem = items.data[0];
 	}
-	console.log(state, 'selectors');
 	return ({
-		firstItem
+		items: {
+			data: items.data,
+			firstItem
+		}
 	});
 };
